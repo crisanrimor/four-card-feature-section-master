@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root{
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.main{
+    min-height: 100vh;
+    display: flex;
+    background-color: var(--very-light-gray);
+    overflow: hidden;
+}
+
+.main__container{
+    width: 90%;
+    max-width: 75rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.main__texts{
+    margin: auto;
+    max-width: 34.375rem;
+    text-align: center;
+}
+
+.main__subtitle{
+    font-weight: 200;
+    color: var(--very-dark-blue);
+    font-size: 2.2rem;
+}
+
+.main__title{
+    font-size: 2.5rem;
+    color: var(--very-dark-blue);
+    margin-bottom: 0.5em;
+}
+
+.main__paragraph{
+    color: var(--grayish-blue);
+}
+
+.main__cards{
+    margin-top: 3.75em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main__card{
+    background-color: #fff;
+    padding: 2.5em;
+    box-shadow: rgb(0 0 0 / 15%) 0px 10px 20px;
+    border-radius: 0.625rem;
+}
+
+.main__card--1{
+    border-top: 4px solid var(--cyan);
+    width: 32%;
+}
+
+.main__card--2{
+    border-top: 4px solid var(--red);
+    margin-bottom: 1.5em;
+}
+
+.main__card--3{
+    border-top: 4px solid var(--orange);
+}
+
+.main__card--4{
+    border-top: 4px solid var(--blue);
+    width: 32%;
+}
+
+.main__cardscenter{
+    width: 32%;
+}
+
+.main__name{
+    color: var(--very-dark-blue);
+    font-size: 1.25rem;
+    margin-bottom: 0.625em;
+}
+
+.main__info{
+    font-weight: 200;
+    font-size: 0.875rem;
+    color: var(--grayish-blue);
+    line-height: 1.5;
+}
+
+.main__picture{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.875em;
+}
+
+.main__img{
+    display: block;
+}
+
+@media (max-width: 768px){
+
+    .main__container{
+        margin: 3.75em auto;
+    }
+
+    .main__subtitle,
+    .main__title{
+        font-size: 2rem;
+    }
+
+    .main__cards{
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    .main__card--1,
+    .main__card--4,
+    .main__cardscenter{
+        width: 100%;
+        max-width: 25rem;
+    }
+}
+
+@media (max-width: 450px){
+    .main__subtitle,
+    .main__title{
+        font-size: 1.5rem;
+    }
+}
